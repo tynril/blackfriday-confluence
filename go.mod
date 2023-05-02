@@ -1,4 +1,4 @@
-module github.com/kentaro-m/blackfriday-confluence
+module github.com/tynril/blackfriday-confluence
 
 go 1.13
 
