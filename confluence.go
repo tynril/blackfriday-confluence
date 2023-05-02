@@ -270,7 +270,7 @@ func (r *Renderer) RenderNode(w io.Writer, node *bf.Node, entering bool) bf.Walk
 		break
 	case bf.Paragraph:
 		if !entering {
-			if node.Next != nil && node.Next.Type == bf.Paragraph {
+			if node.Next != nil && (node.Next.Type == bf.Paragraph || node.Next.Type == bf.List) {
 				w.Write(nlBytes)
 				w.Write(nlBytes)
 			} else {
